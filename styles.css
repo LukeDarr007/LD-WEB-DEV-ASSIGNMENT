@@ -43,7 +43,8 @@ nav {
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    display: flex; 
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
