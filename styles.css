@@ -1,14 +1,3 @@
-header {
-    display: flex;
-    align-items: center; 
-    justify-content: space-betweem;
-    color:white;
-    background-color: #0A437C;
-    padding: 10px 30px;
-    width: 10000%;
-    box-sizing: border-box;
-}
-
 body {
     background-color: #F5F5F5;
     font-family: Arial, sans-serif;
@@ -16,11 +5,15 @@ body {
     padding: 0;
 }
 
-.logo img {
-    width: 100px;
-    height: auto;
-    display: block;
-    margin: 10px;
+header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    color:white;
+    background-color: #0A437C;
+    padding: 10px 30px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
@@ -43,50 +36,54 @@ h2 {
 
 
 nav {
-    display: flex;
-    align-items: left;
-    text-align: center;
-    justify-content: left;
+    width: 100%;
     background-color: #0A437C;
-    padding: 10px 20px;
-    gap: 40px;
 }
 
-.logo img {
-    width: 100px; 
-    align-items:left; 
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.logo{
+    position: absolute;
+    left: 20px;
+    margin-right: auto;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
 }
 
 .nav-links {
     display: flex;
-    jutify-content: center;
     list-style: none;
     margin: 0;
-    padding 0; 
-    gap: 20px;
+    padding: 0;
+    align-items: space-between;
+    gap: 500px;
 }
 
-nav ul {
-    list-style: none; 
-    display: flex; 
-    gap: 30px;  
-    margin: 0;        
-    padding: 0;             
+.nav-links li a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
 }
 
-nav ul li a {
-    color: #FFFFFF ;      /* This is for the text color */
-    font-family: 'Roboto', sans-serif; /* font style */
-    font-size: 1rem;      /* font size */
-    text-decoration: none; /* remove underline */
-    padding: 5px 15px;
+.nav-links li a:hover {
+    color: #F2C14E; 
+    text-decoration: underline;
 }
 
-nav ul li a:hover {
-    text-decoration: underline; /* optional hover effect */
-    color: #F28B30:
-}
 
-.content {
-    padding: 20px;
-}
