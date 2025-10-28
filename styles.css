@@ -2,7 +2,7 @@ header {
     display: flex;
     align-items: center; 
     justify-content: space-betweem;
-    background-color: #0A437C
+    background-color: #0A437C;
     padding: 10px 30px;
     width: 10000%;
     box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
 
 .logo img {
     width: 100px;
-    height: auto'
+    height: auto;
     display: block;
     margin: 10px;
 }
@@ -36,7 +36,6 @@ h1 {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: #0A437C;
     padding: 10px 20px;
     justify-content: center; /* center the nav items */
@@ -55,11 +54,11 @@ nav {
 }
 
 nav ul {
-    list-style: none; /* removes bullets */
-    display: flex;    /* horizontal layout */
-    margin: 0;        /* remove default margin */
-    padding: 0;       /* remove default padding */
-    gap: 20px;        /* optional spacing between links */
+    list-style: none; 
+    display: flex;   
+    margin: 0;        
+    padding: 0;       
+    gap: 20px;        
 }
 
 nav ul li a {
