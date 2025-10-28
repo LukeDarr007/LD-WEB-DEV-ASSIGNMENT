@@ -44,30 +44,34 @@ h2 {
 
 nav {
     display: flex;
-    align-items: center;
+    align-items: left;
+    text-align: center;
+    justify-content: left;
     background-color: #0A437C;
     padding: 10px 20px;
-    justify-content: center; /* center the nav items */
+    gap: 40px;
 }
 
 .logo img {
     width: 100px; 
+    align-items:left; 
 }
 
 .nav-links {
     display: flex;
+    jutify-content: center;
     list-style: none;
-    gap: 20px; /* space between links */
     margin: 0;
     padding 0; 
+    gap: 20px;
 }
 
 nav ul {
     list-style: none; 
-    display: flex;   
+    display: flex; 
+    gap: 30px;  
     margin: 0;        
-    padding: 0;       
-    gap: 20px;        
+    padding: 0;             
 }
 
 nav ul li a {
