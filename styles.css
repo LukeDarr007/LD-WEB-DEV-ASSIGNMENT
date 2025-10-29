@@ -120,60 +120,32 @@ ul {
 
 /*SEARCH BAR CSS*/
 
-.search-bar {  /* Here is the search bar  */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-bar input[type="text"] { /*here is the CSS for search input field */
-    padding: 50px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-}   
-
-.search-bar button { /*Here is the CSS for the search button */
-    padding: 100px 20px;
-    font-size: 1.5rem;
-    border: none;
-    background-color: #F2C14E;
-    color: #0A437C;
-    border-radius: 0 20px 20px 0;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.search-bar button:hover { /* Here is the hover effect for the search bars button */
-    background-color: white;
-}
-
 .search-section {
     background-color: #F2C14E; 
-    paddding; 40px 0;
+    padding: 20px 0;
     text-align: center; 
 }
 
 .search-bar {
     display: inline-flex;
-    background-color: white;
-    padding: 10px;
+    background-color: #0A437C;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     gap: 10px;
 }
 
 .search-bar input{
-    padding 10px;
+    padding: 50px;
     border 1px solid #ccc;
     border-radius: 5px;
     width: 525px;
+    font-size: 17.5px;
 
 }
 
-search-bar button{
-    padding: 10px 20px;
+ search-bar button{
+    padding: 200px 20px;
     border none;
     background-color: #0A437C;
     color: white;
