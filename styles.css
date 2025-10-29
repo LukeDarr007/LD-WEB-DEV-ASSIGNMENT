@@ -106,4 +106,45 @@ ul {
     text-decoration: underline;
 }
 
+/*SEARCH BAR CSS*/
+
+.search-bar {  /* Here is the search bar  */
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    margin-right: 20px; 
+    right: 20px;
+}
+
+.search-bar input[type="text"] { /*here is the CSS for search input field */
+    padding: 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}   
+
+.search-bar button { /*Here is the CSS for the search button */
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    background-color: #F2C14E;
+    color: #0A437C;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-bar button:hover { /* Here is the hover effect for the search bars button */
+    background-color: #d97706;
+}
+
+main img {
+    max-width: 50%;
+    align-content: left;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
 
