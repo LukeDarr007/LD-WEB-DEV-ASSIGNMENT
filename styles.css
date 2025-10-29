@@ -136,7 +136,7 @@ ul {
 }
 
 .search-bar input{
-    padding: 50px;
+    padding: 30px;
     border 1px solid #ccc;
     border-radius: 5px;
     width: 525px;
@@ -144,8 +144,8 @@ ul {
 
 }
 
- search-bar button{
-    padding: 200px 20px;
+ .search-bar button{
+    padding: 20px 20px;
     border none;
     background-color: #0A437C;
     color: white;
@@ -154,17 +154,23 @@ ul {
 }
 
 .search-bar button:hover{
-    background-color: #03366;
+    background-color: #F2C14E ;
 }
 
-main img {
+.main-image {
     float: left;
     max-width: 40%;
-    align-content: left;
     height: auto;
-    display: block;
     margin: 20px;
 }
+
+.secondary-image {
+    float: left;
+    max-width: 40%;
+    height: auto;
+    margin: 20px;
+}
+
 
 footer{
     background-color: #0A437C;
