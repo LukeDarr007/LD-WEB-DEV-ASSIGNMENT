@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const button = document.querySelector.SelectorAll(".image-slider");
+    const sliders = document.querySelector.SelectorAll(".image-slider");
 
     sliders.ForEach(slider =>{
         let index = 0;
         const slides = slider.querySelectorAll(".slide img");
-        const totaal = slides.length;
+        const total = slides.length;
 
         slides.forEach((img, i) => {
             img.style.display = i === 0 ? "block" : "none";
@@ -28,3 +28,5 @@ document.addEventListener("DOMContentLoaded", function() {
             index = (index + 1) % total;
             showSlides(index);
         });
+    });
+});
