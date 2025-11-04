@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const sliders = document.querySelector.SelectorAll(".image-slider");
+    const sliders = document.querySelectorAll(".image-slider");
 
-    sliders.ForEach(slider =>{
-        let index = 0;
-        const slides = slider.querySelectorAll(".slide img");
+    sliders.forEach(slider => {
+        let slideIndex = 0;
+        const slides = slider.querySelectorAll(".slides img");
         const total = slides.length;
 
         slides.forEach((img, i) => {
@@ -12,21 +12,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
         function showSlides(n) {
             slides.forEach((img, i) => {
-                img.style.display = i === n ? "block" : "none"; 
+                img.style.display = i === n ? "block" : "none";
             });
         }
 
-        const prev = slider.querySelector(".prev");
-        const next = slider.querySelector(".next");
+        const prev =slider.querySelector(".prev");
+        const next =slider.querySelector(".next");
 
         prev.addEventListener("click", () => {
-            index = (index - 1 + total) % total;
-            showSlide(index);
+            slideIndex = (slideIndex -1 + total) % total;
+            showSlides(slideIndex);
         });
 
         next.addEventListener("click", () => {
-            index = (index + 1) % total;
-            showSlides(index);
+            slideindex = (slideIndex + 1) % total;
+            showSlides(slideIndex); 
         });
     });
 });
+      
