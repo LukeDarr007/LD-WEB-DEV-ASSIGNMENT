@@ -159,45 +159,6 @@ ul {
     text-decoration: underline;
 }
 
-/*SEARCH BAR CSS*/
-
-.search-section {
-    background-color: #F2C14E; 
-    padding: 20px 0;
-    text-align: center; 
-}
-
-.search-bar {
-    display: inline-flex;
-    background-color: #0A437C;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    gap: 10px;
-}
-
-.search-bar input{
-    padding: 30px;
-    border 1px solid #ccc;
-    border-radius: 5px;
-    width: 525px;
-    font-size: 17.5px;
-
-}
-
- .search-bar button{
-    padding: 20px 20px;
-    border none;
-    background-color: #0A437C;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-bar button:hover{
-    background-color: #F2C14E ;
-}
-
 .row { 
     display: flex;
     align-items: center;
@@ -317,9 +278,52 @@ footer{
 }
 
 
+/*About Us Page CSS*/
+
 /*COURSES PAGE CSS */
 
 .courses-page h1 {
-    color: #F2C14E;
+    color: white;
 }
+
+/*SEARCH BAR CSS*/
+
+.search-section {
+    background-color: #F2C14E; 
+    padding: 20px 0;
+    text-align: center; 
+}
+
+.search-bar {
+    display: inline-flex;
+    background-color: #0A437C;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    gap: 10px;
+}
+
+.search-bar input{
+    padding: 30px;
+    border 1px solid #ccc;
+    border-radius: 5px;
+    width: 525px;
+    font-size: 17.5px;
+
+}
+
+ .search-bar button{
+    padding: 20px 20px;
+    border none;
+    background-color: #0A437C;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover{
+    background-color: #F2C14E ;
+}
+
+
 
