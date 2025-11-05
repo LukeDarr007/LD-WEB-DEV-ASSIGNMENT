@@ -1,3 +1,5 @@
+/* Index Page CSS */
+
 body {
     background-color: #F5F5F5;
     font-family: Arial, sans-serif;
@@ -111,6 +113,17 @@ ul {
 .logo img{
     width: 100px;
     height: auto;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: logoFadeIn 1s ease forwards;
+    animatiion-delay: 0.5s;
+}
+
+@keyframes logoFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .logo a{
@@ -243,6 +256,8 @@ ul {
 
 .image-slider .slides img.active {
     display: block;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .image-slider button {
@@ -301,4 +316,10 @@ footer{
     width: 100%;
 }
 
+
+/*COURSES PAGE CSS */
+
+.courses-page h1 {
+    color: #F2C14E;
+}
 
