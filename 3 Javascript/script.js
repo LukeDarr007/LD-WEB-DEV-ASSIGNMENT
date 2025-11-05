@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
 
-        const prev =slider.querySelector(".prev");
-        const next =slider.querySelector(".next");
+        const prev = slider.querySelector(".prev");
+        const next = slider.querySelector(".next");
 
         prev.addEventListener("click", () => {
             slideIndex = (slideIndex -1 + total) % total;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         next.addEventListener("click", () => {
-            slideindex = (slideIndex + 1) % total;
+            slideIndex = (slideIndex + 1) % total;
             showSlides(slideIndex); 
         });
     });
