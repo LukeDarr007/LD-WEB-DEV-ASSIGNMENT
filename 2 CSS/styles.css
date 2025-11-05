@@ -23,11 +23,10 @@ main{
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
 h1 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Georgia', serif;
     font-weight: bold;
-    text-transform: uppercase;
     font-size: 2.5rem; 
-    color: white; 
+    color: black; 
     text-align: center;
 }
 
@@ -40,7 +39,7 @@ h2 {
 }
 
 main p {
-    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
     margin: 20px;
     text-align: center;
