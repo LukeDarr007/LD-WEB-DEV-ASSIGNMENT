@@ -479,4 +479,25 @@ body.modal-open nav {
 }
 
 
+.search-results {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height 200px;
+    overflow-y: auto;
+    border-radius: 5px;
+    margin-top: 5px;
+    z-index: 1000;
+}
+
+.search-results div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-results div:hover{
+    background-color: #F2C14E;
+}
+
 

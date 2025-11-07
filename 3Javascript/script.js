@@ -118,6 +118,72 @@ searchInput.addEventListener("keydown", (e) => {
 });
 
 
+// Course search bar 
+const searchInput = document.getElementById("course-search");
+const searchResults = document.getElementById("search-results");
+
+function openCourseModal(courseName) {
+    const description = courseDescriptions.find(
+    key => key.toLowerCase() === courseNmae.toLowerCase()
+    );
+    if (matchedCourse) {
+        modalTitle.textContent = matchedCourse;
+        modalDescription.textContent = courseDescriptions[matchedCourse];
+        modal.style.display = "flex";
+        document.body.classList.add("modal-open");
+    
+    }
+}
+
+searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim().toLowerCase();
+    searchResults.innerHTML = "";
+
+    if (query.length === 0) return ;
+
+    const matches = Object.keys(courseDescriptions).filter(course =>
+        course.toLowerCase().includes(query)
+    );
+
+    matches.forEach(match =>) {
+        const div = document.createElement("div");
+        div.textContent = match;
+        div.addEventListener("click", () => {
+            openCourseModal(match);
+            searchResults.innerHTML = "";
+            searchInput.value - match;
+        });
+        searchRestults.appendChild(div);
+    });
+
+document.addEventListener("click", (e) =>) {
+    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.innerHTML = "";
+    }
+};
+
+    
+
+searchBtn.addEventListener("click", () => {
+    const query = searchInput.value.trim();
+    openCourseModal(query);
+
+});
+
+searchBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        const query = searchInput.value.trim();
+    openCourseModal(query);
+    }
+});
+
+
+
+
+
+
+
+
 
 
       
