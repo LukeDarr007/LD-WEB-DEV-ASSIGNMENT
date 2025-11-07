@@ -406,6 +406,10 @@ footer{
     animation: fadeInModal 0.3s ease;
 }
 
+.modal-content h2 {
+    color: black;
+}
+
 
 @keyframes fadeInModal {
     from { opacity: 0;transform: scale(0.95); }

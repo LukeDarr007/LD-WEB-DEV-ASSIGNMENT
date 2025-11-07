@@ -50,12 +50,20 @@ if (document.body.classList.contains('courses-page')) {
 const modal = document.getElementById("course-modal");
 const modalTitle = document.getElementById("course-title");
 const modalDescription = document.getElementById("course-description");
-const closeBtn = document.querySelector("close-btn");
+const closeBtn = document.querySelector(".close-btn");
 
 const courseDescriptions = {
     "BSc (Hons) Computing": "This Course covers blah blach",
     "BSc (Hons) Software Engineering": "This Course covers blah blach",
+    "BSc (Hons) Computer Networks":"This Course covers blah blach",
+    "BSc (Hons) Cyber Security with Forensics":"This Course covers blah blach",
+    "BSc (Hons) Computer Science": "This Course covers blah blach",
+    "BSc (Hons) Software Development": "This Course covers blah blach",
     "BSc (Hons) Graphic Design": "This Course covers blah blach",
+    "BSc (Hons) Digital Media Designs": "This Course covers blah blach",
+    "BSc (Hons) Interior Architecture": "This Course covers blah blach",
+    "BSc (Hons) Design (Visual Communication)": "This Course covers blah blach",
+    "BSc (Hons) Design Futures": "This Course covers blah blach",
 };
 
 document.querySelectorAll(".course-content li").forEach(course => {
@@ -80,6 +88,34 @@ function closeModal() {
 }
 
 
+const searchInput = document.getElementById("course-search");
+const searchBtn = document.getElementById("search-btn");
+
+function openCourseModal(courseName) {
+    const matchedCourse = Obkect.keys(courseDescriptions).find(
+    if(description){
+        modalTitle.textContent = courseName;
+        modalDescription.textContent = description;
+        modal.style.display = "flex";
+        document.body.classList.add("modal-open");
+    } else {
+        alert("Course not found!");
+    }
+}
+
+searchBtn.addEventListener("click",() => {
+    const query = searchInput.value.trim();
+    openCourseModal(query);
+});
+
+
+searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        const query = searchInput.value.trim();
+        openCourseModal(query);
+
+    }
+});
 
 
 
