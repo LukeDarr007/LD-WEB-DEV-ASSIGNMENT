@@ -47,5 +47,41 @@ if (document.body.classList.contains('courses-page')) {
 }
 
 
+const modal = document.getElementById("course-modal");
+const modalTitle = document.getElementById("course-title");
+const modalDescription = document.getElementById("course-description");
+const closeBtn = document.querySelector("close-btn");
+
+const courseDescriptions = {
+    "BSc (Hons) Computing": "This Course covers blah blach",
+    "BSc (Hons) Software Engineering": "This Course covers blah blach",
+    "BSc (Hons) Graphic Design": "This Course covers blah blach",
+};
+
+document.querySelectorAll(".course-content li").forEach(course => {
+    course.addEventListener("click", () =>{
+        const courseName = course.textContent.trim();
+        modalTitle.textContent = courseName;
+        modalDescription.textContent = courseDescriptions [courseName]
+
+        modal.style.display = "flex";
+        document.body.classList.add("modal-open");
+    });
+});
+
+closeBtn.addEventListener("click", closeModal);
+modal.addEventListener("click", e => {
+    if (e.target === modal) closeModal();
+});
+
+function closeModal() {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+}
+
+
+
+
+
 
       
