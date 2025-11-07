@@ -30,4 +30,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+
+// COURSE PAGE JAVASCRIPT
+
+if (document.body.classList.contains('courses-page')) {
+  document.querySelectorAll('.course-bubble').forEach(bubble => {
+    bubble.addEventListener('click', () => {
+      const isActive = bubble.classList.contains('active');
+      document.querySelectorAll('.course-bubble').forEach(b => b.classList.remove('active'));
+      if (!isActive) bubble.classList.add('active');
+    });
+  });
+}
+
+
+
       

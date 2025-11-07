@@ -286,7 +286,73 @@ footer{
     color: white;
 }
 
-/*SEARCH BAR CSS*/
+.course-bubbles {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 3rem 2rem;
+}
+
+.course-bubble {
+    background: #0A437C
+    color:white;
+    width: 200px;
+    height: 200px; 
+    border-raidus: 50%;
+    text-align:center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s ease-in-out; 
+    overflow: hidden;
+    box-shadow 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.course-bubble h2{
+    margin-top: 80px
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.course-content {
+    opacity: 0;
+    max-height 0;
+    overflow: hidden;
+    transition all 0.5s ease;
+}
+
+.course-bubble.active {
+    width: 350px;
+    height: 350px;
+    border-radius 30px;
+    background: #F28B30;
+}
+
+.course-bubble.active h2 {
+    opacity: 0;
+}
+
+.course-bubble.active .course-content {
+    opacity: 1;
+    max-height: 500px;
+    padding: 2rem;
+}
+
+.course-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-content li {
+    padding: 6px 0;
+    font-size: 1rem;
+}
+
+
+
+
+
+/* COURSES SEARCH BAR CSS*/
 
 .search-section {
     background-color: #F2C14E; 
