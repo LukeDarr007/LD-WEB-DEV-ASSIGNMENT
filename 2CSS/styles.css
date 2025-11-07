@@ -443,52 +443,72 @@ body.modal-open nav {
 
 .search-section {
     background-color: #F2C14E; 
-    padding: 20px 0;
+    padding: 40px 0 80px 0;
+    margin: 0;
     text-align: center; 
+    overflow: visible;
+}
+
+header h1 {
+    margin: 0;
 }
 
 .search-bar {
-    display: inline-flex;
+    display: flex;
     background-color: #0A437C;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     gap: 10px;
+    margin: 0 auto;
+    width: 400px;
+    position: relative;
 }
 
 .search-bar input{
-    padding: 30px;
+    flex: 1;
+    padding: 10px 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 300px;
     font-size: 17.5px;
 
 }
 
  .search-bar button{
-    padding: 20px 20px;
+    padding: 15px 20px;
     border: none;
     background-color: #0A437C;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0;
 }
 
-.search-bar button:hover{
-    background-color: #F2C14E ;
+.search-bar div:hover{
+    background-color: #F2C14E;
+    color: black;
 }
 
 
 .search-results {
     position: absolute;
-    background: white;
+    top: 100%;
+    left: 0;
+    background: #0A437C;
     border: 1px solid #ccc;
     width: 100%;
     max-height: 200px;
     overflow-y: auto;
-    border-radius: 5px;
+    border-radius: 0 0 10px 10px;
     margin-top: 5px;
     z-index: 1000;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-results div:hover {
+    background-color: #F2C14E
+    color: black;
 }
 
 .search-results div {
