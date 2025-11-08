@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
 
     const modal = document.getElementById("course-modal");
     const closeBtn = modal.querySelector(".close-btn");
@@ -22,10 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
         "BA (Hons) Digital Media Production": { type: "Undergraduate", description: "Develop skills in video, audio and digital media production.", ucasCode: "W310", ucasPoints: "112", year: "2026/27", mode: "Full-time", length: "3 / 4 Years", subject: "Art and Design" }
     };
 
+    // --- Modal ---
     function openCourseModal(name) {
         const course = coursesData[name];
         if (!course) return;
-        modal.querySelector("#course-title").textContent = name + " (" + course.type + ")";
+
+        modal.querySelector("#course-title").textContent = `${name} (${course.type})`;
         modal.querySelector("#course-description").textContent = course.description;
         modal.querySelector("#course-ucas").textContent = course.ucasCode || "N/A";
         modal.querySelector("#course-points").textContent = course.ucasPoints || "N/A";
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         modal.querySelector("#course-mode").textContent = course.mode;
         modal.querySelector("#course-length").textContent = course.length;
         modal.querySelector("#course-subject").textContent = course.subject;
+
         modal.style.display = "flex";
         document.body.classList.add("modal-open");
     }
@@ -43,8 +46,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     closeBtn.addEventListener("click", closeModal);
-    modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+    modal.addEventListener("click", e => {
+        if (e.target === modal) closeModal();
+    });
 
+    // --- Course Bubbles ---
     document.querySelectorAll(".course-bubble").forEach(bubble => {
         bubble.addEventListener("click", () => {
             const active = bubble.classList.contains("active");
@@ -53,39 +59,56 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // --- Course List Items ---
     document.querySelectorAll(".course-content li").forEach(li => {
         li.addEventListener("click", e => {
             e.stopPropagation();
-            let name = li.textContent.replace(/[-–]\s*(Undergraduate|Postgraduate)/i, "").trim();
+            const name = li.textContent.replace(/[-–]\s*(Undergraduate|Postgraduate)/i, "").trim();
             const match = Object.keys(coursesData).find(c => c.toLowerCase() === name.toLowerCase());
             openCourseModal(match || name);
         });
     });
 
+    // --- Search ---
     const searchInput = document.getElementById("course-search");
     const searchBtn = document.getElementById("search-btn");
     const searchResults = document.getElementById("search-results");
 
-    searchInput.addEventListener("input", () => {
+    function updateSearchResults() {
         const query = searchInput.value.trim().toLowerCase();
         searchResults.innerHTML = "";
-        if (!query) return;
-        Object.keys(coursesData).forEach(c => {
-            if (c.toLowerCase().includes(query)) {
+
+        if (!query) {
+            searchResults.style.display = "none";
+            return;
+        }
+
+        Object.keys(coursesData).forEach(course => {
+            if (course.toLowerCase().includes(query)) {
                 const div = document.createElement("div");
-                div.textContent = c;
+                div.textContent = course;
                 div.addEventListener("click", () => {
-                    openCourseModal(c);
-                    searchInput.value = c;
+                    openCourseModal(course);
+                    searchInput.value = course;
                     searchResults.innerHTML = "";
+                    searchResults.style.display = "none";
                 });
                 searchResults.appendChild(div);
             }
         });
-    });
 
-    searchBtn.addEventListener("click", () => openCourseModal(searchInput.value.trim()));
-    searchInput.addEventListener("keydown", e => { if (e.key === "Enter") openCourseModal(searchInput.value.trim()); });
-    document.addEventListener("click", e => { if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) searchResults.innerHTML = ""; });
+        searchResults.style.display = searchResults.children.length ? "block" : "none";
+    }
+
+    searchInput.addEventListener("input", updateSearchResults);
+    searchInput.addEventListener("keydown", e => { if (e.key === "Enter") { openCourseModal(searchInput.value.trim()); searchResults.style.display = "none"; } });
+    searchBtn.addEventListener("click", () => { openCourseModal(searchInput.value.trim()); searchResults.style.display = "none"; });
+
+    document.addEventListener("click", e => {
+        if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+            searchResults.innerHTML = "";
+            searchResults.style.display = "none";
+        }
+    });
 
 });
