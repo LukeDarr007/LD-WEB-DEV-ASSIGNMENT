@@ -26,10 +26,10 @@ main{
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
 h1 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', serif;
     font-weight: bold;
     font-size: 2.5rem; 
-    color: white; 
+    color: black; 
     text-align: center;
     opacity: 0;
     transform: translateY(-20px);
@@ -47,11 +47,23 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
     color: white ;
-    margin-top: 5px;
+    margin-top: 10px;
     opacity: 0;
     transform: translateY(-20px);
     animation: fadeInSubtitle 1s ease forwards;
     animation-delay: 0.5s;
+}
+
+.subtitle2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: white ;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInSubtitle 1s ease forwards;
+    animation-delay: 0.5s;
+
 }
 
 @keyframes fadeInSubtitle {
