@@ -6,15 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const indexSearchBar = document.querySelector(".search-bar input");
     const indexSearchBtn = document.querySelector(".search-bar button");
 
-    const indexSearchData = [
-        "Computing Courses",
-        "Design Courses",
-        "Facilities",
-        "Learning Resources",
-        "Information",
-        "Careers Support",
-        "Student Services"
-    ];
+
 
     if (indexSearchBar && indexSearchBtn) {
         const indexSearchResults = document.createElement("div");
@@ -98,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // ==================== COURSES PAGE JS ====================
+    // COURSES PAGE JS 
 
     const modal = document.getElementById("course-modal");
     if (modal) {
@@ -179,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     return;
                 }
                 Object.keys(coursesData).forEach(c => {
-                    if (c.toLowerCase().includes(query)) {
+                    if (!c.toLowerCase().includes("courses") && c.toLowerCase().includes(query)) {
                         const div = document.createElement("div");
                         div.textContent = c;
                         div.addEventListener("click", () => {
@@ -207,5 +199,4 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     }
-
 });
