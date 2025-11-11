@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
 header {
@@ -13,14 +14,17 @@ header {
     justify-content: center;
     min-height: 150px;
     color:white;
-    background-color: #0A437C;
+    background-color: #F2C14E; 
     padding: 10px 30px;
     box-sizing: border-box;
     text-align: center;
+    
 }
 
 main{
-    padding-top: 20px; 
+    padding:0;
+    margin:0;
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
@@ -128,7 +132,7 @@ ul {
     opacity: 0;
     transform: translateY(-20px);
     animation: logoFadeIn 1s ease forwards;
-    animatiion-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
 @keyframes logoFadeIn {
@@ -528,13 +532,26 @@ body.modal-open nav {
 /* COURSES SEARCH BAR CSS*/
 
 .search-section {
-    background-color: #F2C14E; 
+    
     padding: 40px 0 80px 0;
+    background-color: #0A437C;
+   
     margin: 0;
     text-align: center; 
     overflow: visible;
 }
-
+#course-search{
+    width:100%;
+    max-width:1000px;
+    margin:5px;
+    border-radius:10px;
+    padding:10px;
+}
+#search-btn{
+    margin:5px;
+    border-radius:10px;
+    padding: 10px;
+}
 header h1 {
     margin: 0;
 }
@@ -543,8 +560,8 @@ header h1 {
     display: flex;
     padding: 0;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    gap: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    
     margin: 0 auto;
     width: 400px;
     padding: 60px; 
@@ -553,7 +570,13 @@ header h1 {
     box-sizing: border-box;
     overflow: visible; 
     z-index: 100;
+     width:100%;
+    max-width:1200px;
+    align-items: center;
+    justify-content: center;
+     background-color: #F2C14E; 
 }
+
 
 .search-results {
     position: absolute;
@@ -563,11 +586,16 @@ header h1 {
     background: #F28B30;
     border: 2px solid #F28B30;
     border-top: none;
-    border-radius: 0 0 10px 10px; 
+    border-radius:10px; 
     max-height: 300px;
     overflow-y: auto;
     display: none;
     z-index: 1000;
     padding: 10px;
     cursor: pointer;
+    
+}
+#search-results li :hover{
+    background: #efb17a;
+
 }
