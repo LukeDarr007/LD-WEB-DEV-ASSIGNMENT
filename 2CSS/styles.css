@@ -25,7 +25,7 @@ body {
     overflow-x: hidden;
 }
 
-  /* NAVIGATION BAR/*
+  /*NAVIGATION BAR */
 
 nav {
     width: 100%;
@@ -453,6 +453,36 @@ footer p {
         height: 150px;
     }
 }
+
+.course-overview .dropdown {
+    margin-bottom: 1.5rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.course-overview .dropdown-header {
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s;
+}
+
+.course-overview .dropdown-header:hover {
+    background: var(--highlight-color);
+}
+
+.course-overview .dropdown-content {
+    padding: 1rem 1.5rem;
+    display: none;   /* hidden by default */
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
 
 
 /* RESPONSIVE ADJUSTMENTS*/
