@@ -2,63 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ==================== INDEX PAGE JS ====================
 
-    // ----- Search Bar for Index Page -----
-    const indexSearchBar = document.querySelector(".search-bar input");
-    const indexSearchBtn = document.querySelector(".search-bar button");
-
-
-
-    if (indexSearchBar && indexSearchBtn) {
-        const indexSearchResults = document.createElement("div");
-        indexSearchResults.classList.add("search-results");
-        document.querySelector(".search-bar").appendChild(indexSearchResults);
-
-        function showIndexResults(matches) {
-            indexSearchResults.innerHTML = "";
-            if (matches.length === 0) {
-                indexSearchResults.style.display = "none";
-                return;
-            }
-            matches.forEach(item => {
-                const div = document.createElement("div");
-                div.textContent = item;
-                div.addEventListener("click", () => {
-                    indexSearchBar.value = item;
-                    indexSearchResults.innerHTML = "";
-                    indexSearchResults.style.display = "none";
-                    alert(`You selected: ${item}`); // Replace with navigation if needed
-                });
-                indexSearchResults.appendChild(div);
-            });
-            indexSearchResults.style.display = "block";
-        }
-
-        indexSearchBar.addEventListener("input", () => {
-            const query = indexSearchBar.value.trim().toLowerCase();
-            const matches = indexSearchData.filter(item => item.toLowerCase().includes(query));
-            showIndexResults(matches);
-        });
-
-        indexSearchBtn.addEventListener("click", () => {
-            const match = indexSearchData.find(item => item.toLowerCase() === indexSearchBar.value.trim().toLowerCase());
-            if (match) alert(`You searched for: ${match}`);
-        });
-
-        indexSearchBar.addEventListener("keydown", e => {
-            if (e.key === "Enter") {
-                const match = indexSearchData.find(item => item.toLowerCase() === indexSearchBar.value.trim().toLowerCase());
-                if (match) alert(`You searched for: ${match}`);
-            }
-        });
-
-        document.addEventListener("click", e => {
-            if (!indexSearchBar.contains(e.target) && !indexSearchResults.contains(e.target)) {
-                indexSearchResults.innerHTML = "";
-                indexSearchResults.style.display = "none";
-            }
-        });
-    }
-
     // ----- Image Sliders for Index Page -----
     const sliders = document.querySelectorAll(".image-slider");
     sliders.forEach(slider => {
@@ -90,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // COURSES PAGE JS 
+    // ==================== COURSES PAGE JS ====================
 
     const modal = document.getElementById("course-modal");
     if (modal) {
@@ -196,6 +139,21 @@ document.addEventListener("DOMContentLoaded", function() {
                     courseSearchResults.innerHTML = "";
                     courseSearchResults.style.display = "none";
                 }
+            });
+        }
+
+        // ----- Scroll Wheel Controls -----
+        const scrollLeft = document.getElementById('scroll-left');
+        const scrollRight = document.getElementById('scroll-right');
+        const courseBubbles = document.querySelector('.course-bubbles');
+
+        if (scrollLeft && scrollRight && courseBubbles) {
+            scrollLeft.addEventListener('click', () => {
+                courseBubbles.scrollBy({ left: -350, behavior: 'smooth' });
+            });
+
+            scrollRight.addEventListener('click', () => {
+                courseBubbles.scrollBy({ left: 350, behavior: 'smooth' });
             });
         }
     }
