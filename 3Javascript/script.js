@@ -143,4 +143,17 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollRight.addEventListener('click', () => courseBubbles.scrollBy({ left: 350, behavior: 'smooth' }));
     }
 
+
+const dropdownHeaders = document.querySelectorAll('.dropdown-header');
+
+dropdownHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.classList.toggle('show');
+    });
 });
+
+});
+
+
+

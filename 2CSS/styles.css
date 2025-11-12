@@ -477,11 +477,22 @@ footer p {
 }
 
 .course-overview .dropdown-content {
-    padding: 1rem 1.5rem;
-    display: none;   /* hidden by default */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
     color: var(--text-color);
+    transition: max-height 0.5s ease, opacity 0.4s ease;
     line-height: 1.6;
 }
+
+.course-overview .dropdown-content.show {
+    max-height: 1000px;
+    display: block;
+    opacity: 1;
+    padding: 1rem 1.5rem; 
+}
+
+
 
 
 
