@@ -24,8 +24,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-
-  /*NAVIGATION BAR */
+   
 
 nav {
     width: 100%;
@@ -49,9 +48,9 @@ nav {
 }
 
 .course-bubble img {
-    width: 100%;       /* fill bubble width */
-    max-height: 120px; /* prevent stretching too tall */
-    object-fit: cover; /* crop image nicely without distortion */
+    width: 100%;     
+    max-height: 120px; 
+    object-fit: cover; 
     border-radius: 12px;
     margin-bottom: 1rem;
 }
@@ -108,13 +107,93 @@ header h1 {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-15px); }
     to { opacity: 1; transform: translateY(0); }
+    
 }
+
+ /* DISCOVER CANTOR CSS */
+
+/* DISCOVER PAGE LAYOUT */
+.discover-bubbles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 1rem;
+}
+
+/* Row layout */
+.discover-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* helps it stay responsive */
+  width: 100%;
+}
+
+/* Make the single bubble centered below */
+.discover-row.single {
+  justify-content: center;
+}
+
+/* Bubble styling (same as before) */
+.discover-bubble {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.discover-bubble:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.discover-bubble img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+}
+
+.discover-bubble h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.discover-bubble p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.bubble-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .discover-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+/* COURSE BAR CSS */
+
+
 
 /* SEARCH BAR (COURSES PAGE)*/
 
 .search-section {
-    background-color: var(--primary-color);
-    padding: 2.5rem 1rem;
+    background: linear-gradient(135deg, var(--primary-color), #07325c);
+    color: white;
     text-align: center;
 }
 
@@ -182,22 +261,28 @@ header h1 {
 /*COURSE BUBBLES SECTION */
 
 .course-bubbles {
+    background: white;
     display: flex;
-    justify-content: center;     /* Center horizontally */
-    align-items: center;         /* Center vertically */
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;   
     flex-wrap: wrap;             /* Wrap on smaller screens */
-    gap: 3rem;
-    padding: 3rem 2rem;
+    gap: 2rem;
+    padding: 1rem 1rem;
     text-align: center;
     overflow: hidden;            /* Removes horizontal scroll */
     width: 100%;
     margin: 0 auto;              /* Centers container within page */
     box-sizing: border-box;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 /* COURSE BUBBLES SECTION*/
 
 .course-bubble {
+    width: 80%;
+    max-width: 2000px;
     flex: 0 1 280px;             
     height: 320px;
     background-color: var(--primary-color);
@@ -253,6 +338,25 @@ header h1 {
 .course-content::-webkit-scrollbar-thumb:hover {
     background: rgba(255,255,255,0.5);
 }
+
+.course-content ul {
+    list-style-type: none; /* removes default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.course-content li {
+    background: rgba(255, 255, 255, 0.1); /* subtle background highlight */
+    margin: 0.4rem 0; /* space between courses */
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.course-content li:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
 
 /* COURSE MODAL*/
 
@@ -546,3 +650,6 @@ footer p {
         margin: 0 auto;
     }
 }
+
+
+
