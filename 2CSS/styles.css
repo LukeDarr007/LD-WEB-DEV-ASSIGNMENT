@@ -25,6 +25,7 @@ body {
     overflow-x: hidden;
 }
    
+/* NAVIGATION BAR STYILING*/
 
 nav {
     width: 100%;
@@ -37,6 +38,52 @@ nav {
     top: 0;
     z-index: 1000;
 }
+
+/* SUB NAVIGATION STYILING */
+
+.sub-nav {
+  background-color: var(--accent-color);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 70px;
+  z-index: 999;
+}
+
+.sub-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.sub-nav li {
+  display: inline-flex;
+}
+
+.sub-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+}
+
+.sub-nav a:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  transform: translateY(-1px) scale(1.03);
+}
+
+
+
+/* LOGO IMAGE STYILING */
 
 .logo img {
     width: 90px;
