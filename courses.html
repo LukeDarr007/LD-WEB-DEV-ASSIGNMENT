@@ -3,136 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantor College</title>
+    <title>Cantor College – Courses</title>
     <link rel="stylesheet" href="2CSS/styles.css">
 </head>
+
 <body class="courses-page">
-   
 
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="4 Images/logo.png" alt="Cantor College Logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Cantor's Courses</a></li>
-            <li><a href="facilities.html">Facilities</a></li>
-            <li><a href="learning_resources.html">Learning Resources</a></li>
-            <li><a href="information.html">Information</a></li>
-        </ul>
-</nav>
-
-<nav class="sub-nav">
-  <ul>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="findus.html">How to Find Us</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="login.html">Login</a></li>
-  </ul>
-</nav>
-
-
-<header>
-    <div class="header">
-        <h1>Find Your Ideal Course</h1>
+<!-- MAIN NAV -->
+<nav>
+    <div class="logo">
+        <a href="index.html"><img src="4 Images/logo.png" alt="Cantor College Logo"></a>
     </div>
-</header>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="courses.html">Cantor's Courses</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="learning_resources.html">Learning Resources</a></li>
+        <li><a href="information.html">Information</a></li>
+    </ul>
+</nav>
 
+<!-- SUB NAV -->
+<nav class="sub-nav">
+    <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="findus.html">How to Find Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<header class="header">
+    <h1>Find Your Ideal Course</h1>
+</header>
 
 <main class="courses-main">
 
-
-    <section class="page-intro">
-  <p>
-Welcome to Cantor College’s Course Catalogue. On this page, you’ll find information about the two main types of courses we offer here at Cantor. Below that, you can use the search bar to look for specific courses, or explore our interactive course bubbles to get a quick overview of what each programme involves.<p>
+<!-- INTRO -->
+<section class="page-intro">
+    <p>
+        Welcome to Cantor College’s Course Catalogue. Explore our full range of Computing and Design 
+        programmes below. You can also use the search bar to quickly find any course and open its 
+        full details using the interactive pop-up modal.
+    </p>
 </section>
 
 
+
+<!-- SEARCH -->
+<section class="search-section">
+    <div class="search-bar">
+        <input id="course-search" type="text" placeholder="Search Courses">
+        <button id="search-btn" type="button">Search</button>
+        <div id="search-results" class="search-results"></div>
+    </div>
+</section>
 <section class="course-overview">
+  <div class="dropdown">
+        <h2 class="dropdown-header">Computing Courses Information</h2>
+        <div class="dropdown-content">
+            <p>The College offers undergraduate, foundation year and postgraduate courses in Computing, Computer Networks, Software Engineering, Cyber Security and Forensics, Information Systems and more.</p>
+            <p>Our courses are British Computer Society accredited and are designed to prepare students for modern industry careers or further postgraduate study such as MSc or PhD pathways, please
+                find our Computing Courses below:
+            </p>
+        </div>
+    </div>
 
-    <div class="dropdown">
-    <h2 class ="dropdown-header"> Computing Courses Information: </h2>
-    <div class="dropdown-content">
-     <p>The College offers a range of courses to suit applicants with varying backgrounds and educational abilities. At undergraduate level, there are single BSc Honours Degree courses in Computing, Computer Networks, Software Engineering and Cyber Security with Forensics amongst others.</p>
-        <p>The College teaches undergraduate and postgraduate courses in a wide range of specialisms, including computer science, software development, information systems, networking and software engineering. It is at the heart of a passionate computing community, including student societies devoted to games development, digital forensics and programming.</p>
-        <p>The courses are British Computer Society accredited and are highly relevant to modern industry. They are designed to prepare students for professional occupations in Computing and related fields. Many graduates continue their studies to pursue a higher degree such as an MSc. or PhD.</p>
+<div class="course-bubble" id="computing-bubble">
+    <h2>Computing Courses</h2>
+    <div class="course-content">
+        <h3>Undergraduate Degrees</h3>
+        <ul>
+            <li>BSc (Hons) Computing</li>
+            <li>BSc (Hons) Computer Networks</li>
+            <li>BSc (Hons) Cyber Security with Forensics</li>
+            <li>BSc (Hons) Computer Science</li>
+            <li>BSc (Hons) Computer Science for Games</li>
+            <li>BEng (Hons) Software Engineering</li>
+        </ul>
+
+        <h3>Foundation Year Degrees</h3>
+        <ul>
+            <li>BSc (Hons) Computing with Foundation Year</li>
+            <li>BSc (Hons) Cyber Security with Foundation Year</li>
+            <li>BSc (Hons) Cyber Security with Forensics with Foundation Year</li>
+            <li>BSc (Hons) Computer Science with Foundation Year</li>
+            <li>BSc (Hons) Computer Science for Games with Foundation Year</li>
+            <li>BEng (Hons) Software Engineering with Foundation Year</li>
+            <li>BSc (Hons) Information Technology with Business Studies with Foundation Year</li>
+            <li>BSc (Hons) Business and Digital Technology with Foundation Year</li>
+        </ul>
+
+        <h3>Postgraduate Degrees</h3>
+        <ul>
+            <li>MSc Computing</li>
+            <li>MSc Cyber Security</li>
+            <li>MPhil Computing and Informatics</li>
+        </ul>
     </div>
 </div>
 
-    <div class="dropdown">
-    <h2 class ="dropdown-header"> Design Courses Information: </h2>
-    <div class="dropdown-content">
-    <p>The College is an internationally connected creative community of diverse disciplines housed under one roof. We shape our students' futures, preparing them to shape the world through applied knowledge and creativity.</p>
-        <p>The College's art and design courses don't just train you, they promote alternative ways of thinking, making and communicating; they provide you with space, tools and inspiration to develop your creative practice and a clear career path. You'll get expert teaching from active practitioners and researchers who will encourage you to adopt innovative and resourceful approaches that both perceive and create opportunities for better lives.</p>
-        <p>You’ll develop your creative practice whilst interacting with your peers in well-equipped studios, making and digital workshops. At the same time, you'll learn professional skills by working on applied briefs facilitated through our links with industry.</p>
+ <div class="dropdown">
+        <h2 class="dropdown-header">Design Courses Information</h2>
+        <div class="dropdown-content">
+            <p>The College is an internationally connected creative community offering courses in Graphic Design, Interior Architecture, Product Design, Game Design and more.</p>
+            <p>Students benefit from studio-based learning, industry-linked briefs and access to advanced digital workshops and creative facilities.
+                Please find our Design Courses below: </p>
+        </div>
+    </div>
+
+<div class="course-bubble" id="design-bubble">
+    <h2>Design Courses</h2>
+    <div class="course-content">
+
+        <h3>Undergraduate Degrees</h3>
+        <ul>
+            <li>BA (Hons) Graphic Design</li>
+            <li>BA (Hons) Interior Architecture and Design</li>
+            <li>BA (Hons) Jewellery, Materials and Design</li>
+            <li>BA (Hons) Game Design and Development</li>
+            <li>BA (Hons) Product Design</li>
+            <li>BSc (Hons) Product Design</li>
+            <li>BA (Hons) Digital Media Production</li>
+        </ul>
+
     </div>
 </div>
-    
+
+<section class="contact-cta">
+  <p>
+    Interested in any of these courses or want to know more? 
+    <a href="contact.html">Contact Us</a> today and our admissions team will help you get started!
+  </p>
 </section>
 
-      <section class="search-section">
-    <div class = "search-bar">
-            <input id="course-search" type="text" placeholder="Search Courses">
-            <button id="search-btn" type="button">Search</button>
-            <div id="search-results" class="search-results"></div>
-        </div>
-    </section>
+        
+</section>
 
-    <!-- Course Bubbles Section -->
-    <section class="course-bubbles">
-        <!-- Your existing computing and design bubbles -->
-    </section>
-
-</main>
-
-    <section class="course-bubbles">
-        <div class="course-bubble" id="computing-bubble">
-            <h2> Computing Courses</h2>
-            <div class="course-content">
-                <ul>
-                    <li> BSc (Hons) Computing - Undergraduate</li>
-                     <li> BSc (Hons) Computer Networks - Undergraduate</li>
-                    <li> BSc (Hons) Cyber Security with Forensics - Undergraduate</li>
-                    <li> BSc (Hons) Computer Science for Games - Undergraduate</li>
-                     <li> BSc (Hons) Software Engineering - Undergraduate</li>
-                      <li> BSc (Hons) Computer Science  - Undergraduate</li>
-                    <li> Msc Computing - Postgraduate</li>
-                    <li> MPhil Computing and Informatics - Postgraduate </li>
-                     <li> Msc Cyber Security - Postgraduate</li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="course-bubble" id="design-bubble">
-            <h2> Design Courses</h2>
-            <div class="course-content">
-                <ul>
-                    <li> BA (Hons) Graphic Design - Undergraduate</li>
-                    <li> BA (Hons) Interior Architecture and Design - Undergraduate</li>
-                     <li> BA (Hons) Jewellery, Materials and Design - Undergraduate</li>
-                    <li> BA (Hons) Game Design and Development - Undergraduate</li>
-                    <li> Bsc (Hons) Product Design - Undergraduate</li>
-                    <li> BA (Hons) Product Design - Undergraduate</li>
-                    <li> BA (Hons) Digital Media Production - Undergraduate</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-
-<div class="scroll-controls">
-    <button id"scroll-right" class=""scroll-btn"</button>
-    <button id"scroll-right" class=""scroll-btn"</button></button>
-</div>
-
-
-
-
-
- 
-    
-
+</section>
 
 </main>
 
@@ -140,25 +148,22 @@ Welcome to Cantor College’s Course Catalogue. On this page, you’ll find info
 
 <footer>
     <p>&copy; 2024 Cantor College. All rights reserved.</p>
-    <p> Tel:(01321) 2340 235
-Fax: (01321) 2340 236
-Email: info@cantorcollege.ac.uk </p>
-    <p> Find Your Future In The Digital Sector Today!</p>
+    <p>Tel: (01321) 2340 235 &nbsp; | &nbsp; Fax: (01321) 2340 236<br>Email: info@cantorcollege.ac.uk</p>
+    <p>Find Your Future In The Digital Sector Today!</p>
 </footer>
+
 
 <div id="course-modal" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
         <h2 id="course-title">Course Title</h2>
-        <p id="course-description"></p> 
-        <p><strong>UCAS Code:</strong> <span id="course-ucas"> </span></p> 
-        <p><strong>UCAS Points:</strong> <span id="course-points"> </span></p> 
-        <p><strong>Year of Entry:</strong> <span id="course-year"> </span></p> 
-        <p><strong>Mode of Attendance:</strong> <span id="course-mode"> </span></p> 
-        <p><strong>Study Length</strong>:</strong> <span id="course-length"> </span></p> 
-        <p><strong>Subject Area:</strong> <span id="course-subject"> </span></p> 
-
-
+        <p id="course-description"></p>
+        <p><strong>UCAS Code:</strong> <span id="course-ucas"></span></p>
+        <p><strong>UCAS Points:</strong> <span id="course-points"></span></p>
+        <p><strong>Year of Entry:</strong> <span id="course-year"></span></p>
+        <p><strong>Mode of Attendance:</strong> <span id="course-mode"></span></p>
+        <p><strong>Study Length:</strong> <span id="course-length"></span></p>
+        <p><strong>Subject Area:</strong> <span id="course-subject"></span></p>
     </div>
 </div>
 
