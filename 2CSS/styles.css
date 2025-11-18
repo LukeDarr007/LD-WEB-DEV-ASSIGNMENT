@@ -438,6 +438,113 @@ header h1 {
     margin-bottom: 0.8rem;
 }
 
+/* FACILITIES PAGE – CLEAN REBUILD */
+
+/* ----------- LAYOUT WRAPPER ----------- */
+.facilities-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+/* ----------- ROW LAYOUT ----------- */
+.facility-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+/* Reverse layout (text right, images left) */
+.facility-row.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* ----------- BLUE INFO BOX ----------- */
+.facility-text {
+    background: #0A437C;
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.facility-text h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.facility-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+/* ----------- IMAGE CAROUSEL ----------- */
+.carousel {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-img {
+    display: none;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.carousel-img.active {
+    display: block;
+}
+
+/* Carousel buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #F28B30;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-family: inherit;
+    transition: 0.2s ease;
+}
+
+.carousel-btn:hover {
+    background: #d8741d;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* ----------- MOBILE LAYOUT ----------- */
+@media (max-width: 768px) {
+    .facility-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .facility-row.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .facility-text {
+        order: 1;
+    }
+
+    .carousel {
+        order: 2;
+        margin-top: 1rem;
+    }
+}
+
+
+
 
 
 
@@ -541,11 +648,10 @@ header h1 {
 
 /* HOW TO FIND US PAGE */
 
-/* FIND US — Extra Info Section */
 
 .findus-info {
     text-align: center;
-    background: #0A437C;                 /* Cantor blue */
+    background: #0A437C;                 
     color: white;
     padding: 2rem 1.5rem;
     border-radius: 15px;
@@ -563,7 +669,7 @@ header h1 {
 .findus-info .btn-link {
     display: inline-block;
     padding: 0.75rem 1.6rem;
-    background: #F28B30;                 /* Accent orange */
+    background: #F28B30;               
     color: white;
     border-radius: 10px;
     font-weight: bold;
@@ -610,6 +716,7 @@ header h1 {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
