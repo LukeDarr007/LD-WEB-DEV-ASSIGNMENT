@@ -1,7 +1,6 @@
-
 :root { /* Root will apply all what i have put below to all pages, saving me time so i dont have to type it out for each page */
     --primary-color: #0A437C;
-    --accent-color: #F2C14E;
+    --accent-color: #F28B30;
     --highlight-color: #F28B30;
     --text-color: #222;
     --light-bg: #F5F5F5;
@@ -17,15 +16,31 @@
     padding: 0;
 }
 
+/* DISCOVER CANTOR CSS  */
+
+
 body {
     background-color: var(--light-bg);
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
-   
-/* NAVIGATION BAR STYILING*/
+
+
+.intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    background-color: #F28B30;
+    color: black;
+}
+
+
 
 nav {
     width: 100%;
@@ -39,52 +54,6 @@ nav {
     z-index: 1000;
 }
 
-/* SUB NAVIGATION STYILING */
-
-.sub-nav {
-  background-color: var(--accent-color);
-  padding: 0.75rem 1rem;
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 70px;
-  z-index: 999;
-}
-
-.sub-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-.sub-nav li {
-  display: inline-flex;
-}
-
-.sub-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: var(--radius);
-  transition: color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
-}
-
-.sub-nav a:hover {
-  background-color: var(--primary-color);
-  color: var(--accent-color);
-  transform: translateY(-1px) scale(1.03);
-}
-
-
-
-/* LOGO IMAGE STYILING */
-
 .logo img {
     width: 90px;
     transition: var(--transition);
@@ -94,18 +63,12 @@ nav {
     transform: scale(1.05);
 }
 
-.course-bubble img {
-    width: 100%;     
-    max-height: 120px; 
-    object-fit: cover; 
-    border-radius: 12px;
-    margin-bottom: 1rem;
-}
-
 .nav-links {
     display: flex;
     list-style: none;
     gap: 1.5rem;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links a {
@@ -120,27 +83,65 @@ nav {
     color: var(--accent-color);
 }
 
-/* Responsive nav */
+/* Responsive Navigation */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         padding: 1rem;
+        gap: 1rem;
     }
 
     .nav-links {
         flex-direction: column;
+        text-align: center;
         gap: 1rem;
     }
 }
 
-/*HEADER SECTION*/
+
+.sub-nav {
+  background-color: var(--accent-color);
+  padding: 0.75rem 2rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 70px;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.sub-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.sub-nav a:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  transform: translateY(-1px) scale(1.03);
+}
+
+
 
 header {
     background-color: var(--accent-color);
     color: var(--white);
     text-align: center;
     padding: 4rem 2rem;
-    position: relative;
     box-shadow: var(--shadow);
 }
 
@@ -154,97 +155,120 @@ header h1 {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-15px); }
     to { opacity: 1; transform: translateY(0); }
-    
 }
 
- /* DISCOVER CANTOR CSS */
 
-/* DISCOVER PAGE LAYOUT */
-.discover-bubbles {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.5rem;
-  padding: 3rem 1rem;
-}
-
-/* Row layout */
-.discover-row {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap; /* helps it stay responsive */
-  width: 100%;
-}
-
-/* Make the single bubble centered below */
-.discover-row.single {
-  justify-content: center;
-}
-
-/* Bubble styling (same as before) */
-.discover-bubble {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  width: 100%;
-  max-width: 380px;
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.discover-bubble:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-.discover-bubble img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: var(--radius);
-  margin: 1rem 0;
-}
-
-.discover-bubble h2 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.discover-bubble p {
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-.bubble-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Responsive layout */
-@media (max-width: 900px) {
-  .discover-row {
-    flex-direction: column;
+.row {
+    display: flex;
     align-items: center;
-  }
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.row.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.row-text {
+    flex: 1 1 400px;
+    max-width: 500px;
 }
 
 
 
-/* COURSE BAR CSS */
+.image-slider {
+    flex: 1 1 400px;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    position: relative;
+    background: #000; /* prevents white flash during slide */
+}
+
+.image-slider .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.image-slider img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 12px;
+}
+
+/* Slider Buttons */
+.image-slider .prev,
+.image-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.45);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.image-slider .prev:hover,
+.image-slider .next:hover {
+    background-color: rgba(0,0,0,0.65);
+}
+
+.image-slider .prev { left: 10px; }
+.image-slider .next { right: 10px; }
 
 
 
-/* SEARCH BAR (COURSES PAGE)*/
+@media (max-width: 900px) {
+    .row, .row.row-reverse {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 
-.search-section {
-    background: linear-gradient(135deg, var(--primary-color), #07325c);
+    .image-slider, .row-text {
+        max-width: 95%;
+    }
+
+    .image-slider img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-slider img {
+        height: 150px;
+    }
+}
+
+
+
+footer {
+    background-color: #0A437C;
     color: white;
     text-align: center;
-    padding-bottom: 2rem;
-    margin-top: 3rem;    
-    margin-bottom: 3rem;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+    margin-top: 2rem;
+}
+
+/* COURSE PAGE CSS */   
+
+#course-search { /* SEARCH BAR (COURSES PAGE)*/
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
 }
 
 .search-bar {
@@ -260,15 +284,16 @@ header h1 {
     box-shadow: var(--shadow);
 }
 
-#course-search {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    border: none;
-    border-radius: var(--radius);
-    font-size: 1rem;
+.search-section { 
+    background: linear-gradient(135deg, var(--primary-color), #07325c);
+    color: black  ;
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-top: 3i8765r9876567876543rem;    
+    margin-bottom: 3rem;
 }
 
-#search-btn {
+#search-btn { /* CSS For The Search Button */
     padding: 0.75rem 1.5rem;
     margin-left: 0.5rem;
     border: none;
@@ -284,7 +309,7 @@ header h1 {
     background-color: var(--highlight-color);
 }
 
-.search-results {
+.search-results { /* CSS For The Search Results */
     position: absolute;
     top: 100%;
     left: 0;
@@ -310,11 +335,9 @@ header h1 {
 
 /*COURSE BUBBLES SECTION */
 
-
-
 .course-bubble {
-    max-width: 800px;        /* keeps bubbles a nice size */
-    margin: 40px auto;       /* centers them on the page */
+    max-width: 800px;       
+    margin: 40px auto;      
     padding: 25px;
     background: #0A437C;;
     text-align: center;
@@ -339,12 +362,12 @@ header h1 {
 
 .course-content {
     opacity: 0;
-    max-height: 150px;       /* Fixed height for scroll area */
-    overflow-y: auto;        /* Vertical scroll inside bubble */
+    max-height: 150px;      
+    overflow-y: auto;      
     transition: var(--transition);
     width: 100%;
     margin-top: 0.5rem;
-    padding-right: 5px;      /* For scrollbar spacing */
+    padding-right: 5px;     
 }
 
 .course-bubble.active .course-content {
@@ -377,8 +400,8 @@ header h1 {
 }
 
 .course-content li {
-    background: rgba(255, 255, 255, 0.1); /* subtle background highlight */
-    margin: 0.4rem 0; /* space between courses */
+    background: rgba(255, 255, 255, 0.1); 
+    margin: 0.4rem 0; 
     padding: 0.6rem 1rem;
     border-radius: 8px;
     transition: background 0.3s ease;
@@ -388,28 +411,116 @@ header h1 {
     background: rgba(255, 255, 255, 0.25);
 }
 
-/* CONTACT CTA SECTION */
-.contact-cta {
-    background: #0A437C;
-    color: white;
+/* COURSE MODAL*/
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: var(--white);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 600px;
+    box-shadow: var(--shadow);
+    animation: fadeInModal 0.3s ease;
     text-align: center;
-    padding: 2rem 1rem;
-    border-radius: 15px;
-    margin: 3rem auto 0 auto;
-    max-width: 900px;
-    font-size: 1.2rem;
 }
 
-.contact-cta a {
-    color: #ffd700; /* Highlight link */
-    font-weight: bold;
-    text-decoration: none;
-    margin-left: 0.3rem;
+@keyframes fadeInModal {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-.contact-cta a:hover {
-    text-decoration: underline;
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: var(--transition);
 }
+
+.close-btn:hover {
+    color: var(--highlight-color);
+}
+
+body.modal-open main, 
+body.modal-open header, 
+body.modal-open footer, 
+body.modal-open nav {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.course-overview .dropdown {
+    margin-bottom: 2.5rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.course-overview .dropdown-header {
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s;
+}
+
+.course-overview .dropdown-header:hover {
+    background: var(--highlight-color);
+}
+
+.course-overview .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    color: var(--text-color);
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+    line-height: 1.6;
+}
+
+.course-overview .dropdown-content.show {
+    max-height: 1000px;
+    display: block;
+    opacity: 1;
+    padding: 1rem 1.5rem; 
+}
+
+.page-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.page-intro h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.page-intro p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
 
 /* FACILTIES PAGE CSS */ 
 
@@ -438,16 +549,13 @@ header h1 {
     margin-bottom: 0.8rem;
 }
 
-/* FACILITIES PAGE – CLEAN REBUILD */
-
-/* ----------- LAYOUT WRAPPER ----------- */
 .facilities-section {
     max-width: 1200px;
     margin: 3rem auto;
     padding: 0 1rem;
 }
 
-/* ----------- ROW LAYOUT ----------- */
+
 .facility-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -456,12 +564,11 @@ header h1 {
     align-items: center;
 }
 
-/* Reverse layout (text right, images left) */
+
 .facility-row.reverse {
     grid-template-columns: 1fr 1fr;
 }
 
-/* ----------- BLUE INFO BOX ----------- */
 .facility-text {
     background: #0A437C;
     color: white;
@@ -482,7 +589,7 @@ header h1 {
     margin-bottom: 0.8rem;
 }
 
-/* ----------- IMAGE CAROUSEL ----------- */
+
 .carousel {
     position: relative;
     width: 100%;
@@ -499,7 +606,7 @@ header h1 {
     display: block;
 }
 
-/* Carousel buttons */
+
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -522,7 +629,7 @@ header h1 {
 .carousel-btn.prev { left: 10px; }
 .carousel-btn.next { right: 10px; }
 
-/* ----------- MOBILE LAYOUT ----------- */
+
 @media (max-width: 768px) {
     .facility-row {
         grid-template-columns: 1fr;
@@ -544,8 +651,46 @@ header h1 {
 }
 
 
+/* LEARNING RESOURCES PAGE CSS */
 
+.learning-resources {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
 
+.lr-section {
+    background: #F5F5F5;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+       font-family: 'Roboto', sans-serif;
+}
+
+.lr-section h2 {
+    color: #0A437C;
+    font-family: 'Roboto', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center; 
+}
+
+.lr-section p,
+.lr-section li {
+    color: #2B2B2B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.lr-section ol {
+    margin-left: 1.5rem;
+}
+
+.lr-section strong {
+    color: #0A437C;
+}
 
 
 /* ABOUT US PAGE CSS */
@@ -636,7 +781,7 @@ header h1 {
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
-}
+
 
 .awards-bar img {
     height: 80px;
@@ -717,12 +862,8 @@ header h1 {
     }
 }
 
+/* CONTACT US PAGE CSS */ 
 
-
-
-/* CONTACT US PAGE */ 
-
-/* CONTACT PAGE MAIN */
 .contact-main {
     max-width: 900px;
     margin: 2rem auto;
@@ -730,7 +871,7 @@ header h1 {
     font-family: Arial, sans-serif;
 }
 
-/* CONTACT INFO AND FORM BOXES */
+
 .contact-info, 
 .contact-form {
     background-color: #0A437C; /* Cantor College blue */
@@ -742,14 +883,14 @@ header h1 {
     text-align: center;
 }
 
-/* HEADINGS INSIDE BOXES */
+
 .contact-info h2, 
 .contact-form h2 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
 }
 
-/* FORM STYLING */
+
 .contact-form form {
     display: flex;
     flex-direction: column;
@@ -769,7 +910,7 @@ header h1 {
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 8px;
-    background-color: #F28B30; /* Accent Orange */
+    background-color: #F28B30; 
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -780,13 +921,13 @@ header h1 {
     background-color: #e07b25;
 }
 
-/* LINKS INSIDE BOXES */
+
 .contact-form a {
     color: white;
     text-decoration: underline;
 }
 
-/* HEADER TEXT */
+
 .header h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -800,273 +941,89 @@ header h1 {
     color: #2B2B2B;
 }
 
-/* FOOTER */
-footer {
+
+/* LOGIN PAGE CSS */
+
+body.login-page {
+    background-color: #0A437C;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+body.login-page .login-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+body.login-page .login-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+body.login-page .login-left {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+body.login-page .login-left h2 {
+    color: #0A437C;
+    margin-bottom: 1.5rem;
+}
+
+body.login-page .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+body.login-page .input-group label {
+    margin-bottom: 0.3rem;
+}
+
+body.login-page .input-group input {
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+body.login-page .login-btn {
+    padding: 0.75rem;
+    border: none;
     background-color: #0A437C;
     color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 0.95rem;
-}
-
-
-
-
-/* COURSE MODAL*/
-
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(6px);
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.modal-content {
-    background: var(--white);
-    color: var(--text-color);
-    padding: 2rem;
-    border-radius: var(--radius);
-    width: 90%;
-    max-width: 600px;
-    box-shadow: var(--shadow);
-    animation: fadeInModal 0.3s ease;
-    text-align: center;
-}
-
-@keyframes fadeInModal {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-.close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
     cursor: pointer;
-    color: var(--primary-color);
-    transition: var(--transition);
+    width: 100%;
+    margin-top: 1rem;
 }
 
-.close-btn:hover {
-    color: var(--highlight-color);
+body.login-page .login-btn:hover {
+    background-color: #07406a;
 }
 
-body.modal-open main, 
-body.modal-open header, 
-body.modal-open footer, 
-body.modal-open nav {
-    filter: blur(5px);
-    pointer-events: none;
-    user-select: none;
+body.login-page .forgot-password a {
+    text-decoration: none;
+    color: #0A437C;
+
 }
 
-/*FOOTER SECTION*/
-
-footer {
-    background-color: var(--primary-color);
+body.login-page footer {
+    background-color:  #F28B30; 
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 3rem;
-    font-size: 0.95rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
-
-/* IMAGE SLIDER / CAROUSEL IMAGES*/
-
-.image-slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.image-slider .slides {
-    display: flex;
-    gap: 1rem; 
-}
-
-.image-slider img {
-    width: 80%;          
-    max-width: 400px;    
-    height: auto;        
-    display: block;
-    margin: 0 auto;      
-    border-radius: 12px; 
-}
-
-
-@media (max-width: 900px) {
-    .image-slider img {
-        width: 90%;
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 600px) {
-    .image-slider img {
-        width: 95%;
-        max-width: 250px;
-    }
-}
-
-/* IMAGE SLIDER / CAROUSEL*/
-
-/* Container for the row sections */
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin: 3rem 0;
-    flex-wrap: wrap; /* allow wrapping on smaller screens */
-}
-
-/* Reverse rows for alternating layout */
-.row.row-reverse {
-    flex-direction: row-reverse;
-}
-
-/* Text section next to slider */
-.row-text {
-    flex: 1 1 400px;
-    max-width: 500px;
-}
-
-/* Slider container */
-.image-slider {
-    flex: 1 1 400px;
-    max-width: 500px;
-    overflow: hidden;          /* prevent images from spilling out */
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    position: relative;
-}
-
-/* Slides wrapper */
-.image-slider .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-/* Individual images */
-.image-slider img {
-    width: 100%;
-    height: 250px;          /* fixed height to keep all slides same size */
-    object-fit: cover;      /* crop instead of stretching */
-    border-radius: 12px;
-    flex-shrink: 0;         /* prevent images from shrinking */
-}
-
-/* Prev/Next buttons */
-.image-slider .prev,
-.image-slider .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.4);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    z-index: 10;
-}
-
-.image-slider .prev {
-    left: 10px;
-}
-
-.image-slider .next {
-    right: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 900px) {
-    .row, .row.row-reverse {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .image-slider, .row-text {
-        max-width: 90%;
-    }
-
-    .image-slider img {
-        height: 200px;
-    }
-}
-
-@media (max-width: 600px) {
-    .image-slider img {
-        height: 150px;
-    }
-}
-
-.course-overview .dropdown {
-    margin-bottom: 2.5rem;
-    background: var(--white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-}
-
-.course-overview .dropdown-header {
-    margin: 0;
-    padding: 1rem 1.5rem;
-    background: var(--primary-color);
-    color: var(--white);
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: background 0.3s;
-}
-
-.course-overview .dropdown-header:hover {
-    background: var(--highlight-color);
-}
-
-.course-overview .dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 1.5rem;
-    color: var(--text-color);
-    transition: max-height 0.5s ease, opacity 0.4s ease;
-    line-height: 1.6;
-}
-
-.course-overview .dropdown-content.show {
-    max-height: 1000px;
-    display: block;
-    opacity: 1;
-    padding: 1rem 1.5rem; 
-}
-
-.page-intro {
-  text-align: center;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.page-intro h2 {
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.page-intro p {
-  font-size: 1.1rem;
-  color: var(--text-color);
-  line-height: 1.6;
+    padding: 1rem 0;
 }
 
 
@@ -1074,36 +1031,12 @@ footer p {
 
 
 
-/* RESPONSIVE ADJUSTMENTS*/
 
-@media (max-width: 900px) {
-    .course-bubbles {
-        gap: 1.5rem;
-        padding: 2rem 1rem;
-    }
 
-    
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
-    }
 
-    .search-bar {
-        flex-direction: column;
-        padding: 1rem;
-    }
 
-    #search-btn {
-        width: 100%;
-        margin-top: 0.5rem;
-    }
 
-    .course-bubble {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
 
 
 
