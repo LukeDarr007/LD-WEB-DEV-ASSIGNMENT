@@ -71,7 +71,7 @@ nav {
     color: var(--accent-color);
 }
 
-/* Responsive Navigation */
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
